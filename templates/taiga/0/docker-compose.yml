@@ -1,5 +1,7 @@
 data:
-  image: tianon/true
+  image: busybox:latest
+  labels:
+    io.rancher.sidekicks: postgres, taigafront, taigaback
   volumes:
     - /var/lib/postgresql/data
     - /usr/local/taiga/media
