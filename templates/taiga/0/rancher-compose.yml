@@ -1,63 +1,51 @@
-.catalog:
+catalog:
   name: "Taiga"
   version: latest
-  description: |
-  	Taiga is a project management platform for agile developers & designers and project managers who want a beautiful tool that makes work truly enjoyable.
-minimum_rancher_version: "v0.46.0"
+  description: 'Taiga is a project management platform for agile developers & designers and project managers who want a beautiful tool that makes work truly enjoyable.'
   uuid: taiga-0
-
   questions:
   - variable: DOMAIN
     description: 'Domain name'
     label: 'Domain:'
     required: true
-    default: vibioh.fr
+    default: example.com
     type: string
-    
   - variable: VERSION
     description: 'Taiga Version'
     label: 'Taiga Version:'
     required: true
     default: stable
-    type: string
-    
+    type: string    
   - variable: TAIGA_PORT
     description: 'Taiga port'
     label: 'Port:'
     required: true
     default: 0.0.0.0:80:80
     type: string
-    
-    - variable: SECRET_KEY
+  - variable: SECRET_KEY
     description: 'Secret Key'
     label: 'Secret Key:'
     required: true
     default: examplesecretkey
-    type: int
-    
-    - variable: EMAIL_HOST
+    type: int  
+  - variable: EMAIL_HOST
     description: 'Email host'
     label: 'Email Host:'
     required: true
     default: smtp.gmail.com
     type: string
-
-    
   - variable: EMAIL_PORT
     description: 'Taiga port'
     label: 'Port:'
     required: true
     default: 587
     type: int
-
-    
   - variable: EMAIL_HOST_USER
     description: 'User Email Address'
     label: 'User Email Address:'
     required: true
     default: youremail@us.ibm.com
     type: string
-    
   - variable: EMAIL_HOST_PASS
     description: 'Email Password'
     label: 'Email Password:'
