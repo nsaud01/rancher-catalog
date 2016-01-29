@@ -13,7 +13,7 @@ db:
   volumes_from:
     - data
 taigaback:
-  image: htdvisser/taiga-back:${VERSION}
+  image: htdvisser/taiga-back:stable
   hostname: dev.example.com
   environment:
     SECRET_KEY: ${SECRET_KEY}
@@ -27,7 +27,7 @@ taigaback:
   volumes_from:
     - data
 taigafront:
-  image: htdvisser/taiga-front-dist:${VERSION}
+  image: htdvisser/taiga-front-dist:stable
   hostname: dev.example.com
   links:
     - taigaback
